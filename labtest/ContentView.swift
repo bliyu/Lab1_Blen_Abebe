@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+     private var number: Int = Int.random(in: 1...200)
     // TODO: Update to your info
     private let fullName = "Blen Abebe"
     private let studentId = "YOUR_STUDENT_ID"
@@ -13,7 +14,7 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .bold()
 
-                Text("Number will appear here")
+                Text("\(number)")
                     .font(.system(size: 56, weight: .bold))
 
                 HStack(spacing: 16) {
