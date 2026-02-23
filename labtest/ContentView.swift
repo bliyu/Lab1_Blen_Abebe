@@ -6,6 +6,7 @@ struct ContentView: View {
      private var wrongCount = 0
      private var attempts = 0
      private var lastCorrect: Bool? = nil
+     private var showSummary = false
     // TODO: Update to your info
     private let fullName = "Blen Abebe"
     private let studentId = "YOUR_STUDENT_ID"
@@ -51,6 +52,11 @@ struct ContentView: View {
                 }
             }
             .padding()
+        .alert("Summary (\(attempts) attempts)", isPresented: ) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Correct: \(correctCount)\nWrong: \(wrongCount)")
+        }
         }
     }
 }
