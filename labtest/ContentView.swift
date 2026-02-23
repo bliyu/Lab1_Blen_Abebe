@@ -30,11 +30,13 @@ struct ContentView: View {
                         handleAnswer(userSaysPrime: true)
                     }
                         .buttonStyle(.borderedProminent)
+                        .controlSize(.large)
 
                     Button("Not Prime") {
                         handleAnswer(userSaysPrime: false)
                     }
                         .buttonStyle(.borderedProminent)
+                        .controlSize(.large)
                 }
 
                  HStack {
