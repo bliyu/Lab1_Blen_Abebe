@@ -68,6 +68,16 @@ struct ContentView: View {
 }
 
 
+        private func resetGame() {
+        number = Int.random(in: 1...200)
+        correctCount = 0
+        wrongCount = 0
+        attempts = 0
+        lastCorrect = nil
+        secondsLeft = 5
+        showSummary = false
+    }
+
     private func isPrime(_ n: Int) -> Bool {
         if n < 2 { return false }
         if n == 2 { return true }
