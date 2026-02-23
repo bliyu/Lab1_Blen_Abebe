@@ -14,6 +14,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack {
+            .navigationTitle("Prime Game")
             VStack(spacing: 16) {
                 Text("Time left: \(secondsLeft)s")
                     .font(.headline)
