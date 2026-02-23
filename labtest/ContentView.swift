@@ -22,10 +22,14 @@ struct ContentView: View {
                     .font(.system(size: 56, weight: .bold))
 
                 HStack(spacing: 16) {
-                    Button("Prime") {}
+                    Button("Prime") {
+                        handleAnswer(userSaysPrime: true)
+                    }
                         .buttonStyle(.borderedProminent)
 
-                    Button("Not Prime") {}
+                    Button("Not Prime") {
+                        handleAnswer(userSaysPrime: false)
+                    }
                         .buttonStyle(.borderedProminent)
                 }
 
