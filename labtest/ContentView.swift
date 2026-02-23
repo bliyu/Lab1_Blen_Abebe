@@ -5,6 +5,7 @@ struct ContentView: View {
      private var correctCount = 0
      private var wrongCount = 0
      private var attempts = 0
+     private var lastCorrect: Bool? = nil
     // TODO: Update to your info
     private let fullName = "Blen Abebe"
     private let studentId = "YOUR_STUDENT_ID"
