@@ -10,8 +10,7 @@ struct ContentView: View {
      private var secondsLeft = 5
     // TODO: Update to your info
     private let fullName = "Blen Abebe"
-    private let studentId = "YOUR_STUDENT_ID"
-    private let crn = "YOUR_CRN"
+    private let studentId = "101213539"
 
     var body: some View {
         NavigationStack {
