@@ -7,6 +7,7 @@ struct ContentView: View {
      private var attempts = 0
      private var lastCorrect: Bool? = nil
      private var showSummary = false
+     private var secondsLeft = 5
     // TODO: Update to your info
     private let fullName = "Blen Abebe"
     private let studentId = "YOUR_STUDENT_ID"
@@ -15,6 +16,8 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 16) {
+                Text("Time left: \(secondsLeft)s")
+                    .font(.headline)
                 Text("Prime / Not Prime")
                     .font(.largeTitle)
                     .bold()
@@ -52,6 +55,9 @@ struct ContentView: View {
                 }
             }
             .padding()
+        .onReceive(Timer.publish(every: 1, on: .main, in: .common).autoconnect()) { _ in
+            tick()
+        }
         .alert("Summary (\(attempts) attempts)", isPresented: ) {
             Button("OK", role: .cancel) {}
         } message: {
