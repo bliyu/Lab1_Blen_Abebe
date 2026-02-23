@@ -2,6 +2,9 @@ import SwiftUI
 
 struct ContentView: View {
      private var number: Int = Int.random(in: 1...200)
+     private var correctCount = 0
+     private var wrongCount = 0
+     private var attempts = 0
     // TODO: Update to your info
     private let fullName = "Blen Abebe"
     private let studentId = "YOUR_STUDENT_ID"
