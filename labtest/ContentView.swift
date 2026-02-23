@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-     private var number: Int = Int.random(in: 1...200)
+     private var number: Int = Int.random(in: 1...500)
      private var correctCount = 0
      private var wrongCount = 0
      private var attempts = 0
@@ -69,7 +69,7 @@ struct ContentView: View {
 
 
         private func resetGame() {
-        number = Int.random(in: 1...200)
+        number = Int.random(in: 1...500)
         correctCount = 0
         wrongCount = 0
         attempts = 0
