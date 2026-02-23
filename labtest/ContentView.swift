@@ -33,6 +33,12 @@ struct ContentView: View {
                         .buttonStyle(.borderedProminent)
                 }
 
+                 HStack {
+                    Text("Correct: \(correctCount)")
+                    Spacer()
+                    Text("Wrong: \(wrongCount)")
+                }
+
                 Spacer()
 
                 NavigationLink("Profile") {
